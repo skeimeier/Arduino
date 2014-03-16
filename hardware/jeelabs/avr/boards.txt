@@ -1,0 +1,19 @@
+jnmicro.name=JeeNode Micro
+jnmicro.upload.tool=avrdude
+jnmicro.upload.protocol=arduino
+jnmicro.upload.maximum_size=8192
+jnmicro.upload.speed=9600
+
+jnmicro.bootloader.tool=avrdude
+jnmicro.bootloader.low_fuses=0xC2
+jnmicro.bootloader.high_fuses=0xD7
+jnmicro.bootloader.extended_fuses=0xFF
+jnmicro.bootloader.unlock_bits=0xFF
+jnmicro.bootloader.lock_bits=0xFF
+# FIXME this boot loader is bogus, IDE 1.5.x does not look in the right place?
+jnmicro.bootloader.file=atmega8/ATmegaBOOT.hex
+
+jnmicro.build.mcu=attiny84
+jnmicro.build.f_cpu=8000000L
+jnmicro.build.core=tiny
+jnmicro.build.variant=standard
