@@ -66,7 +66,7 @@ void lcd_write(char data){
   //controll = MCP_REGSEL;
   lcd.send();
   lcd.write(MCP_GP0);
-  delayMicroseconds(20);
+  //delayMicroseconds(20);
   lcd.write(controll);
   delayMicroseconds(20);
 
@@ -77,7 +77,7 @@ void lcd_write(char data){
   delayMicroseconds(20);
   lcd.write(data);
   delayMicroseconds(20);
-  delayMicroseconds(20);
+  //delayMicroseconds(20);
   controll &= ~MCP_ENABLE;
   lcd.write(controll);
   delayMicroseconds(20);
