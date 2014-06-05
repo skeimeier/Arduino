@@ -1,13 +1,15 @@
 #include <PortsLCD.h>
 
 PortI2C myI2C (1);
-LiquidCrystalI2C lcd (myI2C);
+LiquidCrystalI2C lcd (myI2C,0x20);
 
 void setup() {
   // set up the LCD's number of rows and columns: 
   lcd.begin(16, 2);
   // Print a message to the LCD.
   lcd.print("Hello, world!");
+  delay(5000);
+  
 }
 
 void loop() {
@@ -18,9 +20,9 @@ void loop() {
   lcd.print(millis()/1000);
   // turn the backlight off, briefly
   delay(500);
-  lcd.noBacklight();
+  //lcd.noBacklight();
   delay(50);
-  lcd.backlight();
+  //lcd.backlight();
   delay(500);
 }
 
